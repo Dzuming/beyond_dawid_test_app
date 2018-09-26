@@ -8,7 +8,7 @@ import {BeyondService} from '@getbeyond/ng-beyond-js';
 })
 
 export class AppComponent implements OnInit {
-  title = 'My';
+  title = 'My app';
   constructor(
     private beyondService: BeyondService
   ) {}
