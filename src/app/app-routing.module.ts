@@ -4,14 +4,18 @@ import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
   {
     path: '',
-    loadChildren: 'src/app/home/home.module#HomeModule' },
+    loadChildren: '../app/home/home.module#HomeModule' },
   {
     path: 'home',
-    loadChildren: 'src/app/home/home.module#HomeModule'
+    loadChildren: '../app/home/home.module#HomeModule'
   },
   {
     path: 'todo',
-    loadChildren: 'src/app/todo/todo.module#TodoModule'
+    loadChildren: '../app/todo/todo.module#TodoModule'
+  },
+  {
+    path: 'rss',
+    loadChildren: '../app/rss/rss.module#RssModule'
   },
   {
     path: '**',

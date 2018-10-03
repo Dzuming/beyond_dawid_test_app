@@ -1,0 +1,26 @@
+<div ng-if="state == 0">
+  <h3>Welcome!</h3>
+  <h4>First let's set your feed url.</h4>
+    <form name="configForm">
+      <div class="form-group">
+        <label for="feedUrl">Feed url:</label>
+        <input type="url" class="form-control" name="feedUrl" id="feedUrl" ng-model="config.feed_url" required />
+      </div>
+      <button class="btn btn-primary" title="Save" ng-disabled="configForm.feedUrl.$invalid" ng-click="saveConfig();">Save</button>
+    </form>
+</div>
+<div ng-if="state == 1">
+  <div class="media" ng-repeat="feedEntry in feedEntries track by $index">
+    <div class="media-left">
+      <a ng-href="feedEntry.link">
+        <img class="media-object" ng-src="feedEntry.image.link" />
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        {{feedEntry.title}}
+      </h4>
+      {{feedEntry.description}}
+    </div>
+  </div>
+</div>
